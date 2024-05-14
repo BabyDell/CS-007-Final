@@ -1,0 +1,11 @@
+Keep Track Of In Map Class: 
+- Monster Position
+- Ladder Position
+
+Features of the Game to be Implemented:
+- if player touches monster fight it 
+- if player touches ladder checks if defeated all monsters to advance
+- if ladder climb is succesful generate new room and player starts where the ladder was climbed
+
+What's next: 
+- Finish Classes
