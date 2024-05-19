@@ -1,36 +1,28 @@
 #include <iostream>
+#include <utility>
 
 class Player {
-     public:
-        Player();
+public:
+  Player();
 
-        int getXP();
-        void setXP(int xp);
+  int getXP();
+  void setXP(int xp);
 
-        int getHealth();
-        void setHealth(int health);
+  int getHealth();
+  void setHealth(int health);
 
-        int getYCoordinate();
-        void setYCoordinate(int yCoordinate);
+  int getXCoordinate();
+  int getYCoordinate();
+  void setCoordinate(char key);
 
-        int getXCoordinate();
-        void setXCoordinate(int xCoordinate);
+  std::string getWeapon();
+  void setWeapon(std::string weapon);
 
-        std::string getWeapon();
-        void setWeapon(std::string weapon);
+  void PrintStats();
 
-        void MoveX(int moveBy);
-        void MoveY(int moveBy);
-
-        void PrintStats();
-
-    private: 
-        int xp;
-        int health;
-        int yCoordinate;
-        int xCoordinate;
-        std::string weapon; 
-
-
-
+private:
+  int xp;
+  int health;
+  std::pair<int, int> coordinates;
+  std::string weapon;
 };

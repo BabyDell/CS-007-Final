@@ -1,19 +1,29 @@
 #include "Map.h"
-#include "../../RandomRoom.h"
+// #include "../../RandomRoom.h"
 
+Map::Map() {
+  vector<vector<char>> copyMap(10, vector<char>(10));
+  srand((unsigned)time(NULL));
 
-void SetMap();
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      copyMap[i][j] = 'O';
+    }
+  }
+  map = copyMap;
+}
 
-void newMap(std::pair<int, int> playerCoordinates, 
-    std::pair<int, int> coordMonster1,
-    std::pair<int, int> coordMonster2,
-    std::pair<int, int> coordMonster3, 
-    std::pair<int, int> ladderCoordinates);
+char Map::GetPosition(std::pair<int, int> coordinate) {
+  return map[coordinate.first][coordinate.second];
+}
 
-void updatePlayer(std::pair<int, int> playerCoordinates);
-void updateMon1(std::pair<int, int> coordMonster1);
-void updateMon2(std::pair<int, int> coordMonster2);
-void updateMon3(std::pair<int, int> coordMonster3);
-void updateLadder(std::pair<int, int> ladderCoordinates);
+void Map::SetCoordinate(std::pair<int, int> coordinate) {}
 
-void PrintMap();
+void Map::PrintMap() {
+  for (auto innerArray : map) {
+    for (char output : innerArray) {
+      cout << output << " ";
+    }
+    cout << endl;
+  }
+}

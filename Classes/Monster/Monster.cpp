@@ -1,15 +1,15 @@
-#include "Monster.h"
+// #include "Monster.h"
 
-Monster();
+// Monster();
 
-int getHealth();
-void setHealth(int health);
+// int getHealth();
+// void setHealth(int health);
 
-int getXCoordinate();
-void setXCoordinate(int xCoordinate);
+// int getXCoordinate();
+// void setXCoordinate(int xCoordinate);
 
-int getYCoordinate();
-void setYCoordinate(int yCoordinate);
+// int getYCoordinate();
+// void setYCoordinate(int yCoordinate);
 
-void getName();
-void setName(std::string name);
+// void getName();
+// void setName(std::string name);

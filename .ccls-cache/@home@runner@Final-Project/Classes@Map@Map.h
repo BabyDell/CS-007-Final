@@ -1,36 +1,32 @@
+#include <iostream>
 #include <utility>
 #include <vector>
 using namespace std;
 
 class Map {
 
-    public:
+public:
+  Map();
 
-        void newMap(std::pair<int, int> playerCoordinates, 
-            std::pair<int, int> coordMonster1,
-            std::pair<int, int> coordMonster2,
-            std::pair<int, int> coordMonster3, 
-            std::pair<int, int> ladderCoordinates);
+  void newMap(std::pair<int, int> playerCoordinates,
+              std::pair<int, int> coordMonster1,
+              std::pair<int, int> coordMonster2,
+              std::pair<int, int> coordMonster3,
+              std::pair<int, int> ladderCoordinates);
 
-        void updatePlayer(std::pair<int, int> playerCoordinates);
-        void updateMon1(std::pair<int, int> coordMonster1);
-        void updateMon2(std::pair<int, int> coordMonster2);
-        void updateMon3(std::pair<int, int> coordMonster3);
-        void updateLadder(std::pair<int, int> ladderCoordinates);
-        
-        void PrintMap();
+  char GetPosition(std::pair<int, int> coordinate);
+  void SetCoordinate(std::pair<int, int> coordinate);
 
-    private: 
+  void PrintMap();
 
-        std::pair<int, int> coordMonster1;
-        std::pair<int, int> coordMonster2;
-        std::pair<int, int> coordMosnter3;
+private:
+  std::pair<int, int> coordMonster1;
+  std::pair<int, int> coordMonster2;
+  std::pair<int, int> coordMosnter3;
 
-        std::pair<int, int> ladderCoordinates;
+  std::pair<int, int> ladderCoordinates;
 
-        std::pair<int, int> playerCoordinates;
+  std::pair<int, int> playerCoordinates;
 
-        vector<vector<char>> map;
-
-
+  vector<vector<char>> map;
 };
